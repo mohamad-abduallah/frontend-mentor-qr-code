@@ -25,7 +25,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     background: var(--bg-withe);
-    max-width: 320px;
+    min-width: 288px;
     border-radius: 15px;
     padding: 16px 16px 42px 16px;
 }
@@ -37,16 +37,18 @@ html, body {
 }
 
 .qr-code-main .qr-code-title{
-    width: 288px;
+    min-width: 250px;
     color: var(--dark-blue);
     text-align: center;
     font-size: 25px;
+    line-height: 30px;
     font-weight: var(--weight-700);
     margin-bottom: 22px;
 }
 
 .qr-code-main .qr-code-desc {
     width: 250px;
+    line-height: 18px;
     display: flex;
     color: var(--grayish-blue);
     text-align: center;
