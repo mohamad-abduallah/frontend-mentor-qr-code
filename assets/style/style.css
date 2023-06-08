@@ -52,13 +52,3 @@ html, body {
     text-align: center;
     font-size: var(--font-size);
 }
-
-@media screen and (min-width: 768px) {
-    .qr-code-main {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50% , -50%);
-        position: absolute;
-        margin: 0;
-    }
-}
