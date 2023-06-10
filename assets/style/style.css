@@ -12,7 +12,6 @@ html, body {
     background: var(--bg-light-gray);
     font-size: var(--font-size);
     margin: 0;
-    padding: 0;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -24,7 +23,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     background: var(--bg-withe);
-    width: 288px;
+    max-width: 288px;
     border-radius: 15px;
     padding: 16px 16px 42px 16px;
 }
@@ -36,17 +35,18 @@ html, body {
 }
 
 .qr-code-main .qr-code-title {
-    width: 250px;
+    max-width: 87%;
     color: var(--dark-blue);
     text-align: center;
     font-size: 22px;
     line-height: 30px;
     font-weight: var(--weight-700);
-    margin-bottom: 22px;
+    margin-bottom: 19px;
+    margin-top: unset;
 }
 
 .qr-code-main .qr-code-desc {
-    width: 250px;
+    max-width: 87%;
     line-height: 18px;
     display: flex;
     color: var(--grayish-blue);
