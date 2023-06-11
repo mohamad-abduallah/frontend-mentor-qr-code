@@ -24,13 +24,13 @@ html, body {
     align-items: center;
     background: var(--bg-withe);
     max-width: 288px;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 16px 16px 42px 16px;
 }
 
 .qr-code-main img {
     max-width: 100%;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-bottom: 28px;
 }
 
@@ -40,7 +40,7 @@ html, body {
     text-align: center;
     font-size: 22px;
     line-height: 30px;
-    font-weight: var(--weight-700);
+
     margin-bottom: 19px;
     margin-top: unset;
 }
