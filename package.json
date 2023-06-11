@@ -1,0 +1,32 @@
+{
+  "name": "frontend-mentor-qr-code",
+  "version": "1.0.0",
+  "description": "My Gulp project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamad-abduallah/frontend-mentor-qr-code.git"
+  },
+  "author": "Mohamad abduallah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamad-abduallah/frontend-mentor-qr-code/issues"
+  },
+  "homepage": "https://github.com/mohamad-abduallah/frontend-mentor-qr-code#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.63.3",
+    "static-server": "^2.2.1"
+  }
+}

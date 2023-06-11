@@ -1,0 +1,38 @@
+@import "../abstracts/colors";
+@import "../abstracts/variables";
+
+.qr-code-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $bg-withe;
+  max-width: $mw-288;
+  border-radius: $border-radius-20;
+  padding: $p-16-42;
+
+    img {
+      max-width: $mw-100;
+      border-radius: $border-radius-10;
+      margin-bottom: $mb-28;
+    }
+
+    .qr-code-title {
+      max-width: $mw-87;
+      color: $dark-blue;
+      text-align: center;
+      font-size: $font-size-22;
+      line-height: 30px;
+      margin: {
+        top: $mt-unset;
+        bottom: $mb-19;
+      };
+    }
+
+    .qr-code-desc {
+      max-width: $mw-87;
+      line-height: 18px;
+      display: flex;
+      color: $grayish-blue;
+      text-align: center;
+    }
+}

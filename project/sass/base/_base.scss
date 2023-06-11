@@ -1,0 +1,12 @@
+@import "../abstracts/colors";
+@import "../abstracts/variables";
+html, body {
+  font-family: 'Outfit', sans-serif;
+  background: $bg-light-gray;
+  font-size: $font-size-15;
+  margin: $m-0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
