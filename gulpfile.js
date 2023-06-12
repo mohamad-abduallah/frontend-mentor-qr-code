@@ -15,10 +15,11 @@ const  gulp = require('gulp'),
 // });
 
 // CSS task
+// {outputStyle: 'compressed'} add inside the sass() css to pressure the code
 gulp.task('QR-code-css', function () {
     return gulp.src('project/sass/style.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass())
         .pipe(prefix({cascade: false}))
         .pipe(concat('style.css'))
         .pipe(sourcemaps.write('.'))
