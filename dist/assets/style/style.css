@@ -4,9 +4,8 @@ html, body {
   font-size: 15px;
   margin: 0;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
 }
 
 .qr-code-main {
