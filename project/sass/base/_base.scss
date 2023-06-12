@@ -5,7 +5,7 @@ html, body {
   background: $bg-light-gray;
   font-size: $font-size-15;
   margin: $m-0;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   place-items: center;
 }

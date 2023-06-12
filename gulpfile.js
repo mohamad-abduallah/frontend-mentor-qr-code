@@ -4,7 +4,11 @@ const  gulp = require('gulp'),
        sass = require('gulp-sass')(require('sass')),
        pug = require('gulp-pug'),
        livereload = require('gulp-livereload'),
-       sourcemaps = require('gulp-sourcemaps');
+       sourcemaps = require('gulp-sourcemaps'),
+       uglify = require('gulp-uglify'),
+       notify = require("gulp-notify"),
+       zip = require('gulp-zip');
+       // ftp = require( 'vinyl-ftp' );
 
 //HTML task
 // gulp.task('QR-code-html', function () {
@@ -24,16 +28,27 @@ gulp.task('QR-code-css', function () {
         .pipe(concat('style.css'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist/assets/style'))
+        .pipe(notify('QR-code-css tag is done'))
         // .pipe(livereload());
 });
 
 // JS task
 gulp.task('QR-code-js', function () {
-    return gulp.src('project/js/*.js')
+    return gulp.src(['project/js/*.js', '!project/js/two.js']) // the tow.js file i don't want to add
         .pipe(concat('main.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('dist/assets/js'))
+        .pipe(notify('QR-code-js tag is done'))
         // .pipe(livereload());
 });
+
+//compress Files
+// gulp.task('compress', function () {
+//     return gulp.src('dist/**/*.*')
+//         .pipe(zip('QR-code.zip'))
+//         .pipe(gulp.dest('.'))
+//         .pipe(notify('Files is compressed'))
+// })
 
 //watch task
 gulp.task('watch', function () {
@@ -41,7 +56,8 @@ gulp.task('watch', function () {
     // require('./server.js');
     // gulp.watch('project/*.pug', gulp.series('QR-code-html'));
     gulp.watch('project/sass/**/*.scss', gulp.series('QR-code-css'));
-    gulp.watch('project/js/*.j', gulp.series('QR-code-js'));
-})
+    gulp.watch('project/js/*.js', gulp.series('QR-code-js'));
+    // gulp.watch('dist/**/*.*', gulp.series('compress'));
 
+})
 gulp.task('default', gulp.parallel('watch'));
